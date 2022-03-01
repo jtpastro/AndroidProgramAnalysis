@@ -63,11 +63,6 @@ test {
     }
 }
 
-task buildDemoClass(type: Exec) {
-    workingDir '.'
-    commandLine './buildDemo.sh'
-}
-
 jacocoTestReport {
     reports {
         xml.enabled true
@@ -75,9 +70,5 @@ jacocoTestReport {
     }
 }
 
-build.dependsOn buildDemoClass
-assemble.dependsOn buildDemoClass
-test.dependsOn buildDemoClass
-
 // Define the main class for the application
-mainClassName = 'dev.navids.soottutorial.Main'
+mainClassName = 'br.unb.Main'
